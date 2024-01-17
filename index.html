@@ -2,16 +2,6 @@
 <!doctype html>
 <html id="htmlID" lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="content-type" content="text/html;charset=UTF-8">
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<meta name="robots" content="noindex, nofollow">
-	<meta name="generator" content="Portfoliobox">
-
-	<title id="seoTitle">Portfoliobox</title>
-	<meta id="seoDesc" name="description" content="">
-	<meta id="seoKeywords" name="keywords" content="">
-	<link rel="icon" id="seoSiteIcon" href="">
 
 	<meta id="seoOgTitle" property="og:title" content="">
 	<meta id="seoOgSiteName" property="og:site_name" content="">
@@ -55,7 +45,7 @@
 
 		    <router-view v-on:hidemenu="doHideMenu" v-on:hidefooter="doHideFooter"></router-view>
 
-            <site-footer v-if="!hideFooter"></site-footer>
+           <!-- <site-footer v-if="!hideFooter"></site-footer> -->
 
 		    <pb-checkout v-if="checkoutState.showCheckout"></pb-checkout>
 		    <added-to-cart-popup v-if="checkoutState.showAddedToCart"></added-to-cart-popup>
@@ -65,7 +55,6 @@
 		    <front-alert-popup v-if="frontAlertData.show" v-on:close="frontAlertData.show = false" v-bind:message="frontAlertData.message"></front-alert-popup>
 		    <front-confirm-popup v-if="frontConfirmData.show" v-on:close="frontConfirmData.show = false" v-bind:confirm="frontConfirmData.confirm" v-bind:message="frontConfirmData.message"></front-confirm-popup>
 			<scheduling-popup-main-view v-if="schedulingState && schedulingState.showPopup" v-on:close="schedulingState.showPopup = false; schedulingState.element = null;"></scheduling-popup-main-view>
-		    <portfoliobox-link></portfoliobox-link>
 		    <cookie-message v-if="siteState.EnableCookieMessage === 1"></cookie-message>
 		    <music-player v-if="siteState._showMusicPlayer"></music-player>
 	    </div>
