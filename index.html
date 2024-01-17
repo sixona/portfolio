@@ -122,24 +122,6 @@
 
 <script id="paypal-sdk" src="https://www.paypal.com/sdk/js?client-id=AYO8o6k4SMRJev3eixfQHzuLwukU4u_lduPqsAURE2Q0oO-GR0AtVs1soIT5KuAmuVcI1riCs3U7XPq8&currency=USD&commit=true&disable-funding=credit,card" async defer></script>
 
-<script>
-	if(utils.environment.isTouch() && utils.environment.wWidth() < 1000) {
-		adminApi.adminVisit().then(data => {});
-	}
-</script>
-<script>
-	window.isOnStart = true;  // set on router to false for other pages
-
-	window.addEventListener('beforeunload', function (e) {
-		if(window.isOnStart) {
-			var message = 'Are you sure that you want to leave the admin panel?';
-			e.returnValue = message;
-			e.preventDefault();
-			return message;
-		}
-	});
-</script>
-
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-6D8F0YH4X0"></script>
 <script>
