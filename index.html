@@ -45,7 +45,7 @@
 
 		    <router-view v-on:hidemenu="doHideMenu" v-on:hidefooter="doHideFooter"></router-view>
 
-           <!-- <site-footer v-if="!hideFooter"></site-footer> -->
+           <site-footer v-if="!hideFooter"></site-footer>
 
 		    <pb-checkout v-if="checkoutState.showCheckout"></pb-checkout>
 		    <added-to-cart-popup v-if="checkoutState.showAddedToCart"></added-to-cart-popup>
